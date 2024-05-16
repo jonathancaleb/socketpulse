@@ -1,9 +1,9 @@
 import socket
 import logging
 
-from socketwrench.types import Request, Response
+from socketpulse.types import Request, Response
 
-logger = logging.getLogger("socketwrench")
+logger = logging.getLogger("socketpulse")
 
 
 class Connection:

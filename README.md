@@ -1,4 +1,4 @@
-# socketwrench
+# socketpulse
 A webserver based on `socket.socket` with no dependencies other than the standard library.
 Provides a lightweight quickstart to make an API which supports OpenAPI, Swagger, and more.
 
@@ -9,18 +9,18 @@ this is **not** a production-ready web server. It is a learning tool and a light
 Part of the goal of this project was to understand how web servers work and to make a simple web server that is easy to use and understand.
 As learning progressed, features were added, but the code became a bit more complex.
 To learn more about the basics of web servers and how to develop one from scratch, see [learning.md](./learning.md) or jump straight into the 
-building blocks of source code in [simplestsocketwrench.py](./src/simplestsocketwrench.py) => [simplesocketwrench.py](./src/simplesocketwrench.py) => [socketwrench](./src/socketwrench).
+building blocks of source code in [simplestsocketpulse.py](./src/simplestsocketpulse.py) => [simplesocketpulse.py](./src/simplesocketpulse.py) => [socketpulse](./src/socketpulse).
 If you would prefer to use this library, read on!
 
 # Quickstart
 ### Install
 ```bash
-pip install socketwrench
+pip install socketpulse
 ```
 
 ### Serve a class
 ```python
-from socketwrench import serve, StaticFileHandler
+from socketpulse import serve, StaticFileHandler
 
 class MyServer:
     src = StaticFileHandler(Path(__file__).parent.parent.parent)
@@ -65,7 +65,7 @@ available_types = {
 
 ### Decorators
 ```python
-from socketwrench import route, methods, get, post, put, patch, delete, private
+from socketpulse import route, methods, get, post, put, patch, delete, private
 ```
 These decorators **do not modify** the functions they decorate, they simply `tag` the function by adding attributes to the functions.
 ```func.__dict__[key] = value```. This allows the setting function-specific preferences such as which methods to allow.
@@ -100,7 +100,7 @@ def a(self, b, c=5):
 
 To set the default error mode for all functions, use `set_default_error_mode`.
 ```python
-from socketwrench import set_default_error_mode, ErrorModes
+from socketpulse import set_default_error_mode, ErrorModes
 
 set_default_error_mode(ErrorModes.TRACEBACK) # equivalent to ErrorModes=ErorModes.TRACEBACK
 ```
@@ -139,13 +139,13 @@ def hello():
     return "world"
 ```
 ```commandline
-python -m socketwrench my_module
+python -m socketpulse my_module
 ```
 NOTE: this mode is experimental and less tested than the other modes.
 
 ### Serve a single function on all routes
 ```python
-from socketwrench import serve
+from socketpulse import serve
 
 def print_request(request):
     s = "<h>You made the following request:</h><br/>"
@@ -168,7 +168,7 @@ if __name__ == '__main__':
 import logging
 from pathlib import Path
 
-from socketwrench.tags import private, post, put, patch, delete, route, methods
+from socketpulse.tags import private, post, put, patch, delete, route, methods
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -294,11 +294,11 @@ class Sample:
 
 
 if __name__ == '__main__':
-    from socketwrench import serve
+    from socketpulse import serve
     s = Sample()
     serve(s)
     # OR
     # serve(Sample)
     # OR
-    # serve("socketwrench.samples.sample.Sample")
+    # serve("socketpulse.samples.sample.Sample")
 ```

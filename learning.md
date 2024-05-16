@@ -69,7 +69,7 @@ HTTP/1.1 200 OK
 ## Making a web server
 Python offers lots of pre-built well-tested webservers, such as Flask, Django, and FastAPI, but if you want to learn how to make a webserver from scratch, you can use the built-in `socket` module.
 
-In [simplestsocketwrench.py](./src/simplestsocketwrench.py), we create a simple webserver that listens on port 8080 and responds to any request with a simple HTML page.
+In [simplestsocketpulse.py](./src/simplestsocketpulse.py), we create a simple webserver that listens on port 8080 and responds to any request with a simple HTML page.
 
 ```python
 import socket
@@ -113,10 +113,10 @@ while True:
 It is really that simple! if you run this script and go to `http://localhost:8080` in your browser, you will see the text "OK" displayed on the page.
 
 
-If you understand [simplestsocketwrench.py](./src/simplestsocketwrench.py), you can move on to [simplesocketwrench.py](./src/simplesocketwrench.py), which is a slightly more organized version of the same script that uses classes and methods to handle requests.
+If you understand [simplestsocketpulse.py](./src/simplestsocketpulse.py), you can move on to [simplesocketpulse.py](./src/simplesocketpulse.py), which is a slightly more organized version of the same script that uses classes and methods to handle requests.
 
-[simplesocketwrench.py](./src/simplesocketwrench.py) is probably the place to start if you want to buil an ultra-lean webserver from scratch.
-`socketwrench` has a few more layers of abstraction and ease-of-use features that make it easier to use (hopefully) but harder to understand. 
+[simplesocketpulse.py](./src/simplesocketpulse.py) is probably the place to start if you want to buil an ultra-lean webserver from scratch.
+`socketpulse` has a few more layers of abstraction and ease-of-use features that make it easier to use (hopefully) but harder to understand. 
 It still has nowhere near the complexity or the amount of features of Flask or Tornado, with the upside being it is small and lightweight.
 
 

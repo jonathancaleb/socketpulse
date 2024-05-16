@@ -8,11 +8,11 @@ from functools import wraps
 from pathlib import Path
 import socket
 
-from socketwrench.tags import tag, get, gettag
-from socketwrench.types import Request, Response, Query, Body, Route, FullPath, Method, File, ClientAddr, \
+from socketpulse.tags import tag, get, gettag
+from socketpulse.types import Request, Response, Query, Body, Route, FullPath, Method, File, ClientAddr, \
     HTTPStatusCode, ErrorResponse, Headers, ErrorModes, FileResponse, HTMLResponse, url_decode
 
-logger = logging.getLogger("socketwrench")
+logger = logging.getLogger("socketpulse")
 
 
 class Autofill:
@@ -525,7 +525,7 @@ class RouteHandler:
 
     @get
     def openapi(self) -> str:
-        from socketwrench.openapi import openapi_schema
+        from socketpulse.openapi import openapi_schema
         d = {
             **self.routes,
             **self.variadic_routes

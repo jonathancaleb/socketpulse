@@ -4,9 +4,9 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-from socketwrench.handlers import StaticFileHandler
-from socketwrench.tags import private, post, put, patch, delete, route, methods
-from socketwrench.types import TBDBResponse, FileTypeResponse
+from socketpulse.handlers import StaticFileHandler
+from socketpulse.tags import private, post, put, patch, delete, route, methods
+from socketpulse.types import TBDBResponse, FileTypeResponse
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -168,10 +168,10 @@ class Sample:
 
 
 if __name__ == '__main__':
-    from socketwrench import serve
+    from socketpulse import serve
     s = Sample()
     serve(s)
     # OR
     # serve(Sample)
     # OR
-    # serve("socketwrench.samples.sample.Sample")
+    # serve("socketpulse.samples.sample.Sample")

@@ -1,8 +1,8 @@
 import inspect
 from pathlib import Path
 
-from socketwrench import FileResponse, Response
-from socketwrench.tags import gettag
+from socketpulse import FileResponse, Response
+from socketpulse.tags import gettag
 
 
 def openapi_schema(routes_dict):
@@ -74,7 +74,7 @@ def openapi_schema(routes_dict):
                             class_name = r.split("(")[0]
                             # try to import the class from .types
                             try:
-                                module = __import__("socketwrench.types", fromlist=[class_name])
+                                module = __import__("socketpulse.types", fromlist=[class_name])
                                 return_type = getattr(module, class_name)
                             except:
                                 return_type = Response

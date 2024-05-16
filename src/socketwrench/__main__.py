@@ -1,4 +1,4 @@
-from socketwrench.server import Server
+from socketpulse.server import Server
 
 
 def main():
@@ -17,11 +17,11 @@ def main():
 if __name__ == '__main__':
     import sys
     if len(sys.argv) != 2:
-        print("Usage: python -m socketwrench <import.path.of.module.or.class>")
-        print("Example: python -m socketwrench socketwrench.samples.sample.Sample")
-        print(f"Sample Shortcut: python -m socketwrench sample")
+        print("Usage: python -m socketpulse <import.path.of.module.or.class>")
+        print("Example: python -m socketpulse socketpulse.samples.sample.Sample")
+        print(f"Sample Shortcut: python -m socketpulse sample")
         sys.exit(1)
     m = sys.argv[1]
     if m == "sample":
-        m = "socketwrench.samples.sample.Sample"
+        m = "socketpulse.samples.sample.Sample"
     Server.serve(m)

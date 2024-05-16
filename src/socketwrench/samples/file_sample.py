@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from socketwrench.tags import private, post, put, patch, delete, route, methods
+from socketpulse.tags import private, post, put, patch, delete, route, methods
 
 
 def hello():
@@ -143,9 +143,9 @@ def a(b, c=5):
 
 if __name__ == '__main__':
     import logging
-    from socketwrench import serve
+    from socketpulse import serve
 
     logging.basicConfig(level=logging.DEBUG)
-    # SocketWrench.serve_module("socketwrench.samples.file_sample")
+    # socketpulse.serve_module("socketpulse.samples.file_sample")
     # OR
     serve(__file__)

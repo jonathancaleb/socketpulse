@@ -1,1 +1,1 @@
-recursive-include src/socketwrench/resources *
+recursive-include src/socketpulse/resources *

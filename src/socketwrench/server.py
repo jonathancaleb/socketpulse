@@ -4,10 +4,10 @@ import logging
 import time
 from pathlib import Path
 
-from socketwrench.connection import Connection
-from socketwrench.handlers import RouteHandler, wrap_handler
+from socketpulse.connection import Connection
+from socketpulse.handlers import RouteHandler, wrap_handler
 
-logger = logging.getLogger("socketwrench")
+logger = logging.getLogger("socketpulse")
 
 
 class Server(socket.socket):
