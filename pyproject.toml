@@ -19,6 +19,6 @@ requires-python = ">=3.10"
 where = ["src"]
 
 [project.urls]
-Homepage = "https://github.com/modularizer/socketpulse"
+Homepage = "https://github.com/jonathancaleb/socketpulse"
 
 
